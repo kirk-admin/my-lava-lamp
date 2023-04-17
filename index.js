@@ -56,3 +56,45 @@ const app = {
 };
 
 Vue.createApp(app).mount("#app");
+
+document.getElementById("fullscreenButton").addEventListener("click", () => {
+  toggleFullscreen();
+});
+
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    openFullscreen(document.documentElement);
+  } else {
+    closeFullscreen();
+  }
+}
+
+function openFullscreen(element) {
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if (element.webkitRequestFullscreen) {
+    // Chrome, Safari and Opera
+    element.webkitRequestFullscreen();
+  } else if (element.msRequestFullscreen) {
+    // IE/Edge
+    element.msRequestFullscreen();
+  } else if (element.mozRequestFullScreen) {
+    // Firefox
+    element.mozRequestFullScreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    // Chrome, Safari and Opera
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    // IE/Edge
+    document.msExitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+    // Firefox
+    document.mozCancelFullScreen();
+  }
+}

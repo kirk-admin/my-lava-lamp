@@ -26,3 +26,20 @@
   background: #000;
   background-image: linear-gradient(to right, #222222, #201f1f);
 }
+
+#fullscreenButton {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  opacity: 0.2;
+}
+
+#fullscreenButton:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#fullscreenButton img {
+  width: 25px;
+  height: 25px;
+}
