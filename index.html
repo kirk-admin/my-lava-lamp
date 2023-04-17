@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lava Lamp HTML</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="metaballs">
+        <svg class="metasvg">
+          <defs>
+            <filter id="gooify" width="400%" x="-10%" height="400%" y="-150%">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="15"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0
+                           0 1 0 0 0
+                           0 0 1 0 0
+                           0 0 0 25 -10"
+              />
+            </filter>
+
+            <linearGradient id="lavaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#d8ff4d" />
+              <stop offset="100%" stop-color="#155c27" />
+            </linearGradient>
+          </defs>
+
+          <g filter="url(#gooify)">
+            <circle
+              class="blobb glow"
+              fill="url(#lavaGradient)"
+              ref="circle1"
+              :cx="circle1.x"
+              :cy="circle1.y"
+              r="170"
+            />
+
+            <circle
+              class="blobb glow"
+              fill="url(#lavaGradient)"
+              ref="circle2"
+              :cx="circle2.x"
+              :cy="circle2.y"
+              r="90"
+            />
+
+            <circle
+              class="blobb glow"
+              fill="url(#lavaGradient)"
+              ref="circle3"
+              :cx="circle3.x"
+              :cy="circle3.y"
+              r="120"
+            />
+            <circle
+              class="blobb glow"
+              fill="url(#lavaGradient)"
+              ref="circle4"
+              :cx="circle4.x"
+              :cy="circle4.y"
+              r="140"
+            />
+            <circle
+              class="blobb glow"
+              fill="url(#lavaGradient)"
+              ref="circle5"
+              :cx="circle5.x"
+              :cy="circle5.y"
+              r="70"
+            />
+            <circle
+              class="blobb glow"
+              fill="url(#lavaGradient)"
+              ref="circle6"
+              :cx="circle6.x"
+              :cy="circle6.y"
+              r="170"
+            />
+            <circle
+              class="blobb glow"
+              fill="url(#lavaGradient)"
+              ref="circle7"
+              :cx="circle7.x"
+              :cy="circle7.y"
+              r="200"
+            />
+            <circle
+              class="blobb glow"
+              fill="url(#lavaGradient)"
+              ref="circle8"
+              :cx="circle8.x"
+              :cy="circle8.y"
+              r="150"
+            />
+            <circle
+              class="blobb glow"
+              fill="url(#lavaGradient)"
+              ref="circle9"
+              :cx="circle9.x"
+              :cy="circle9.y"
+              r="100"
+            />
+            <circle
+              class="blobb glow"
+              fill="url(#lavaGradient)"
+              ref="circle10"
+              :cx="circle10.x"
+              :cy="circle10.y"
+              r="80"
+            />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.prod.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

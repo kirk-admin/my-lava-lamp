@@ -1,0 +1,28 @@
+.blobb {
+  fill: url(#lavaGradient);
+}
+
+.glow {
+  filter: url(#glowing);
+}
+
+.metasvg {
+  position: fixed;
+  height: 110vh;
+  width: 110vw;
+  top: -20px;
+  left: -20px;
+  overflow: hidden;
+}
+
+.metaballs {
+  position: fixed;
+  z-index: -1;
+
+  overflow: hidden;
+}
+
+:root {
+  background: #000;
+  background-image: linear-gradient(to right, #222222, #201f1f);
+}
