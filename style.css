@@ -1,3 +1,21 @@
+body {
+  position: relative;
+}
+
+#fps-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #155c27;
+  opacity: 0.2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#fps-container:hover {
+  opacity: 1;
+  color: #329b4c;
+}
+
 .blobb {
   fill: url(#lavaGradient);
 }
